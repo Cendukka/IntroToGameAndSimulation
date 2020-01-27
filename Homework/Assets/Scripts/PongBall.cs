@@ -60,9 +60,44 @@ public class PongBall : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        string coll = collision.gameObject.name;
+        switch (coll)
+        {
+            case "NorthWall":
+                moving.y = -moving.y;
+                break;
+            case "SouthWall":
+                moving.y = -moving.y;
+                break;
+            case "Paddle1":
+                moving.x = -moving.x;
+                break;
+            case "Paddle2":
+                moving.x = -moving.x;
+                break;
+            case "Obstacle":
+                moving.x = -moving.x;
+                break;
+            case "Obstacle1":
+                moving.x = -moving.x;
+                break;
+            case "Obstacle2":
+                moving.x = -moving.x;
+                break;
+            case "Obstacle3":
+                moving.x = -moving.x;
+                break;
+            case "Obstacle4":
+                moving.x = -moving.x;
+                break;
+            default:
+                break;
+
+
+
+        }
      
-        if (collision.gameObject.name == "NorthWall" || collision.gameObject.name == "SouthWall")
+        /*if (collision.gameObject.name == "NorthWall" || collision.gameObject.name == "SouthWall")
         {
             moving.y = -moving.y;
         }
@@ -71,6 +106,11 @@ public class PongBall : MonoBehaviour
         {
             moving.x = -moving.x;
         }
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            moving.y = -moving.y;
+            moving.x = -moving.x;
+        }*/
         
     }
     void OnTriggerEnter2D(Collider2D collision)
