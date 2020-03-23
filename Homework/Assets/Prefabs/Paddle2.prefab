@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 652371743543734175}
   - component: {fileID: 652371743543734168}
   m_Layer: 0
-  m_Name: PaddleRight
+  m_Name: Paddle2
   m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6263fbd3bdadd42a8683e9537315a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddleSpeed: 10
+  paddleSpeed: 15
 --- !u!50 &652371743543734168
 Rigidbody2D:
   serializedVersion: 4

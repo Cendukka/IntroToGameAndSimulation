@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Paddle
   - Obstacle
+  - Freeze
+  - BallStick
+  - PaddlePlus
+  - SpeedPlus
+  - Goal
+  - DeathZone
+  - BreakoutBlock
   layers:
   - Default
   - TransparentFX

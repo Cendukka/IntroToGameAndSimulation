@@ -5,7 +5,7 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
 
-    public float paddleSpeed = 10.0f;
+    public float paddleSpeed = 15.0f;
 
     
 
@@ -18,7 +18,7 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.name == "Paddle1")
+        if (gameObject.name == "Paddle1" || gameObject.name == "Paddle1(Clone)")
         {
             if (Input.GetKey("w"))
             {
@@ -29,7 +29,7 @@ public class Paddle : MonoBehaviour
                 transform.Translate(0, -paddleSpeed * Time.deltaTime, 0);
             }
         }
-        if(gameObject.name == "Paddle2") 
+        if(gameObject.name == "Paddle2" || gameObject.name == "Paddle2(Clone)") 
         {
             if (Input.GetKey("up"))
             {
@@ -38,6 +38,17 @@ public class Paddle : MonoBehaviour
             if (Input.GetKey("down"))
             {
                 transform.Translate(0, -paddleSpeed * Time.deltaTime, 0);
+            }
+        }
+        if (gameObject.name == "BreakoutPaddle" || gameObject.name == "BreakoutPaddle(Clone)")
+        {
+            if (Input.GetKey("d")|| Input.GetKey("right"))
+            {
+                transform.Translate(paddleSpeed * Time.deltaTime, 0, 0);
+            }
+            if (Input.GetKey("a")|| Input.GetKey("left"))
+            {
+                transform.Translate(-paddleSpeed * Time.deltaTime, 0, 0);
             }
         }
     }
